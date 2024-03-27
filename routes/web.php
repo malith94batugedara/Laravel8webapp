@@ -31,4 +31,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
        Route::get('/addcategory', [CategoryController::class, 'create'])->name('admin.add-category');
 
+       Route::post('/addcategory', [CategoryController::class, 'store'])->name('admin.add-category');
+
 });
